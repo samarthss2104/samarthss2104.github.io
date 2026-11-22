@@ -357,3 +357,36 @@ blockquote span { display: block; font: 600 .7rem/1 var(--sans); font-style: nor
   .rep th { width: 40%; }
   .guru-top { flex-direction: column; align-items: flex-start; }
 }
+
+/* First guru and rhythm gurus */
+.more-gurus { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 32px; }
+.mg { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 28px 22px; text-align: center; }
+.mg h3 { font-size: 1.35rem; margin: 14px 0 6px; }
+.mg .kicker { margin: 0; font-size: .68rem; }
+.monogram.sm { width: 60px; height: 60px; font-size: 1.35rem; margin: 0 auto; }
+.note { max-width: 640px; margin: 28px auto 0; }
+
+/* Stage highlight */
+.highlight { margin-top: 28px; padding: clamp(28px, 4vw, 40px); border-radius: var(--radius);
+  background: linear-gradient(135deg, var(--teal), var(--teal-2)); color: var(--paper); }
+.highlight p:not(.kicker) { font: 500 clamp(1.25rem, 2.2vw, 1.55rem)/1.5 var(--serif); max-width: 60ch; }
+
+/* Duets */
+.sub-intro { color: var(--muted); max-width: 70ch; margin-top: -12px; margin-bottom: 28px; }
+.videos.four { grid-template-columns: repeat(4, 1fr); gap: 22px; }
+.videos.four .video h3 { font-size: 1.12rem; }
+
+/* Collaborate: trio shown whole, band photo matched to its height */
+.duo { display: grid; grid-template-columns: 1.7fr 1fr; gap: 16px; }
+.duo .photo img { aspect-ratio: auto; height: auto; }
+.duo .photo:last-child img { position: absolute; inset: 0; height: 100%; }
+.community-wrap { margin-top: 48px; align-items: start; }
+
+@media (max-width: 960px) {
+  .more-gurus, .videos.four { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  .duo { grid-template-columns: 1fr; }
+  .duo .photo:last-child { aspect-ratio: 4 / 5; }
+  .videos.four { grid-template-columns: 1fr; }
+}
