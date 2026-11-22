@@ -200,6 +200,10 @@ section { padding: clamp(56px, 8vw, 104px) 0; }
 .photo.tall img { aspect-ratio: 4 / 5; }
 .photo-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .photo-pair .photo img { aspect-ratio: 3 / 4; }
+/* journey: the early-years photos are shown whole, side by side, widths in proportion to their shapes */
+.photo-pair.whole { grid-template-columns: 1.16fr 2.15fr; align-items: start; }
+.photo-pair.whole .photo img { aspect-ratio: auto; height: auto; }
+.split:has(.photo-pair.whole) { grid-template-columns: 1fr 1.4fr; }
 .guru-mini { list-style: none; padding: 0; margin: 20px 0; }
 .guru-mini li { display: flex; flex-direction: column; padding: 12px 0; border-top: 1px solid var(--line); }
 .guru-mini b { font: 600 1.35rem/1.2 var(--serif); color: var(--teal); }
@@ -390,3 +394,5 @@ blockquote span { display: block; font: 600 .7rem/1 var(--sans); font-style: nor
   .duo .photo:last-child { aspect-ratio: 4 / 5; }
   .videos.four { grid-template-columns: 1fr; }
 }
+@media (max-width: 960px) { .split:has(.photo-pair.whole) { grid-template-columns: 1fr; } }
+@media (max-width: 640px) { .photo-pair.whole { grid-template-columns: 1fr; } }
