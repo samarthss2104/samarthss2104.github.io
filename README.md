@@ -1,6 +1,6 @@
 # Samarth Sapre · Website
 
-Source of https://samarthss2104.github.io/, the website of Samarth Sapre,
+Source of https://samarthsapre.online/, the website of Samarth Sapre,
 Carnatic and Hindustani flautist from Bengaluru.
 
 This repository holds only the generated website. Please do not edit it by hand:
